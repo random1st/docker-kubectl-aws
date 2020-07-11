@@ -10,3 +10,5 @@ RUN curl -o helm.tar.gz https://get.helm.sh/helm-v3.0.2-linux-amd64.tar.gz
 RUN tar xzvf helm.tar.gz
 RUN mv linux-amd64/helm /usr/bin/helm
 RUN chmod a+x /usr/bin/helm
+RUN pip install pyaml
+RUN pip install jinja2
