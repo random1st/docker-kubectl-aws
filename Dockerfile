@@ -3,7 +3,7 @@ FROM python:3.7
 RUN apt-get update
 
 # AWS IAM AUTHENTICATOR
-RUN curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/aws-iam-authenticator
+RUN curl -o /usr/bin/aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/aws-iam-authenticator
 RUN chmod a+x /usr/bin/aws-iam-authenticator
 
 # AWS CLI
@@ -28,4 +28,3 @@ RUN chmod a+x /usr/bin/terraform
 # UTILS
 RUN pip install pyaml
 RUN pip install jinja2
-
