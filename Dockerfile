@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.9
 
 RUN apt-get update
 
@@ -18,6 +18,8 @@ RUN curl -o helm.tar.gz https://get.helm.sh/helm-v3.8.0-linux-amd64.tar.gz
 RUN tar xzvf helm.tar.gz
 RUN mv linux-amd64/helm /usr/bin/helm
 RUN chmod a+x /usr/bin/helm
+# HELM PLUGINS
+RUN helm plugin install https://github.com/totango/helm-ssm
 
 # TERRAFORM
 RUN curl -o terraform_1.1.4_linux_amd64.zip https://releases.hashicorp.com/terraform/1.1.4/terraform_1.1.4_linux_amd64.zip
