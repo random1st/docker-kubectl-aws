@@ -22,8 +22,8 @@ RUN chmod a+x /usr/bin/helm
 RUN helm plugin install https://github.com/totango/helm-ssm
 
 # TERRAFORM
-RUN curl -o terraform_1.1.4_linux_amd64.zip https://releases.hashicorp.com/terraform/1.1.4/terraform_1.1.4_linux_amd64.zip
-RUN unzip terraform_1.1.4_linux_amd64.zip
+RUN curl -o terraform_1.2.2_linux_amd64.zip https://releases.hashicorp.com/terraform/1.2.2/terraform_1.2.2_linux_amd64.zip
+RUN unzip terraform_1.2.2_linux_amd64.zip
 RUN mv terraform  /usr/bin/terraform
 RUN chmod a+x /usr/bin/terraform
 
